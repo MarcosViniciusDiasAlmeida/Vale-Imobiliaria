@@ -83,13 +83,13 @@ header {
 .btn-primary,
 .btn-secondary {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
 
 .btn-primary {
-    background: #007bff;
+    background: #000101;
 }
 
 .btn-secondary {
@@ -101,14 +101,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* Navbar */
 nav {
     background-color: #0056b3;
-    color: white;
+    color: rgb(128, 99, 99);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -127,7 +127,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('url-do-banner-aqui.jpg');
+    background-image: url('imgs/LOGO\ \(2\).jpg');
     background-size: cover;
     background-position: center;
     color: white;
