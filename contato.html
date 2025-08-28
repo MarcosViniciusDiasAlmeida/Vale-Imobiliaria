@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Vale Imobiliária</title>
+    <meta name="description" content="Entre em contato com a Vale Imobiliária. Telefone, e-mail e formulário de mensagem.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="index.html#home" class="logo" id="logo-site">VALE IMOBILIÁRIA</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+                <li><a href="index.html#about">Sobre Nós</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero reveal" aria-label="Cabeçalho da página de contato">
+        <div class="page-hero-content">
+            <nav class="breadcrumbs" aria-label="Você está aqui">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <span aria-current="page">Contato</span>
+            </nav>
+            <h1>Fale com a Vale Imobiliária</h1>
+            <p>Estamos prontos para ajudar você a encontrar o imóvel ideal.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal" aria-label="Formulário e dados de contato">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; align-items:start;">
+            <div>
+                <form action="#" method="POST" id="form-contato" autocomplete="off">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required aria-required="true" aria-label="Nome">
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-label="E-mail">
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Mensagem"></textarea>
+                    
+                    <button type="submit" class="btn-primary" id="btn-enviar" aria-label="Enviar mensagem">Enviar</button>
+                </form>
+                <div id="form-feedback" aria-live="polite" style="margin-top:10px;"></div>
+            </div>
+            <aside style="background:#fff; border:1px solid var(--border); border-radius:12px; padding:16px; box-shadow:0 8px 22px rgba(0,0,0,.06);">
+                <h3 style="margin-bottom:8px;">Dados da empresa</h3>
+                <ul style="list-style:none; padding:0; color:#374151;">
+                    <li style="margin:6px 0;">
+                        Telefone: <a href="tel:+5535999999999" style="text-decoration:none; font-weight:700; color:var(--brand);">(35) 9 9999-9999</a>
+                    </li>
+                    <li style="margin:6px 0;">
+                        E-mail: <a href="mailto:contato@valeimobiliaria.com.br" style="text-decoration:none; font-weight:700; color:var(--brand);">contato@valeimobiliaria.com.br</a>
+                    </li>
+                    <li style="margin:6px 0; color:#6b7280; font-size:.95rem;">Atendimento: seg a sex, 9h às 18h</li>
+                </ul>
+                <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <a class="btn-secondary" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Vale Imobiliária. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.07c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.84 1.05-.15.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.35-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.46-.16 0-.34-.02-.52-.02-.18 0-.47.07-.72.34-.24.27-.95.93-.95 2.26s.98 2.62 1.12 2.8c.14.18 1.93 2.95 4.67 4.14.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.06-.11-.24-.18-.5-.31z"/>
+            <path d="M26.82 5.18C23.9 2.27 20.05.73 16.01.73 7.77.73 1.03 7.47 1.03 15.7c0 2.67.7 5.27 2.04 7.56L1 31l7.92-2.02c2.23 1.22 4.76 1.86 7.09 1.86h.01c8.23 0 14.97-6.74 14.97-14.97 0-4.04-1.58-7.86-4.49-10.77zm-10.81 23.6h-.01c-2.18 0-4.33-.58-6.21-1.69l-.45-.27-4.7 1.2 1.26-4.58-.29-.47c-1.25-2.03-1.9-4.38-1.9-6.78 0-7.23 5.88-13.11 13.12-13.11 3.5 0 6.79 1.36 9.26 3.84 2.47 2.47 3.84 5.76 3.84 9.26 0 7.23-5.88 13.1-13.12 13.1z"/>
+        </svg>
+    </a>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
