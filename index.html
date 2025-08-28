@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vale Imobiliária</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Vale Imobiliária - Encontre casas e apartamentos à venda e para alugar com atendimento especializado na região.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">VALE IMOBILIÁRIA</a>
-            <ul>
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="#home" class="logo" id="logo-site">VALE IMOBILIÁRIA</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#portfolio">Imóveis</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <li><a href="#blog">Blog</a></li>
@@ -22,85 +28,76 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero reveal" tabindex="-1">
         <div class="hero-content">
             <h1>Bem-vindo à Vale Imobiliária</h1>
             <p>Seu lugar para encontrar o imóvel dos sonhos.</p>
-            <a href="#portfolio" class="btn-primary">Ver Imóveis</a>
+            <a href="imoveis.html" class="btn-primary" id="btn-ver-imoveis">Ver Imóveis</a>
         </div>
-        <!-- Substitua por uma imagem adequada -->
-        <img src="" alt="Imagem de destaque" class="hero-image">
+        <img src="imgs/LOGO (2).jpg" alt="Logo da Vale Imobiliária" class="hero-image" id="hero-image">
     </section>
 
-    <!-- Portfólio -->
-    <section id="portfolio" class="portfolio">
-        <h2>Imóveis Disponíveis</h2>
-        <div class="portfolio-grid">
-            <!-- Card de Imóveis -->
-            <div class="card">
-                <img src="imgs/apartamento no centro.jpg" alt="Imagem do imóvel 1">
-                <h3>Apartamento no Centro</h3>
-                <p>2 quartos, 1 suíte, próximo a tudo que você precisa.</p>
-                <a href="#" class="btn-secondary">Mais Detalhes</a>
-            </div>
-            <div class="card">
-                <img src="imgs/casa com quintal.jpg" alt="Imagem do imóvel 2">
-                <h3>Casa com Quintal</h3>
-                <p>Espaço amplo, ideal para famílias.</p>
-                <a href="#" class="btn-secondary">Mais Detalhes</a>
-            </div>
-            <!-- Adicione mais cards conforme necessário -->
-        </div>
+    <!-- CTA para Imóveis -->
+    <section class="portfolio reveal" aria-label="Chamada para ver imóveis">
+        <h2 class="section-title">Encontre seu próximo imóvel</h2>
+        <p style="color:#4b5563; max-width:700px; margin:8px 0 16px;">
+            Conheça nossa seleção de casas e apartamentos com filtros avançados, favoritos e detalhes completos com mapa.
+        </p>
+        <a href="imoveis.html" class="btn-primary">Explorar Imóveis</a>
     </section>
 
     <!-- Sobre Nós -->
-    <section id="about" class="about">
-        <h2>Sobre a Vale Imobiliária</h2>
-        <p>Somos especialistas em conectar pessoas ao imóvel perfeito, com mais de 10 anos de experiência no mercado regional. Nossa missão é oferecer soluções personalizadas para atender às necessidades de cada cliente, garantindo uma experiência ágil, transparente e satisfatória.
-
-            Contamos com uma equipe de profissionais qualificados, comprometidos em fornecer o melhor atendimento, desde a busca pelo imóvel ideal até o fechamento do negócio. Trabalhamos com um portfólio diversificado de imóveis residenciais, comerciais e oportunidades de investimento na região, sempre priorizando qualidade, confiança e inovação.
-            
-            Além disso, acreditamos na importância de contribuir para a comunidade local, promovendo o desenvolvimento regional e criando conexões duradouras entre nossos clientes e seus lares ou negócios.</p>
-        <img src="imgs/EQUIOE.png" alt="Equipe da imobiliária">
+    <section id="about" class="about reveal">
+        <h2 class="section-title">Sobre a Vale Imobiliária</h2>
+        <p>Somos especialistas em conectar pessoas ao imóvel perfeito, com mais de 10 anos de experiência no mercado regional. Nossa missão é oferecer soluções personalizadas para atender às necessidades de cada cliente, garantindo uma experiência ágil, transparente e satisfatória.</p>
+        <p>Contamos com uma equipe de profissionais qualificados, comprometidos em fornecer o melhor atendimento, desde a busca pelo imóvel ideal até o fechamento do negócio. Trabalhamos com um portfólio diversificado de imóveis residenciais, comerciais e oportunidades de investimento na região, sempre priorizando qualidade, confiança e inovação.</p>
+        <p>Além disso, acreditamos na importância de contribuir para a comunidade local, promovendo o desenvolvimento regional e criando conexões duradouras entre nossos clientes e seus lares ou negócios.</p>
+        <img src="imgs/EQUIOE.png" alt="Equipe da imobiliária" id="img-equipe">
     </section>
 
     <!-- Contato -->
-    <section id="contact" class="contact">
-        <h2>Entre em Contato</h2>
-        <form action="#" method="POST">
+    <section id="contact" class="contact reveal">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form action="#" method="POST" id="form-contato" autocomplete="off">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required aria-required="true" aria-label="Nome">
             
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-required="true" aria-label="E-mail">
             
             <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Mensagem"></textarea>
             
-            <button type="submit" class="btn-primary">Enviar</button>
+            <button type="submit" class="btn-primary" id="btn-enviar" aria-label="Enviar mensagem">Enviar</button>
         </form>
+        <div id="form-feedback" aria-live="polite" style="margin-top:10px;"></div>
     </section>
 
     <!-- Blog -->
-    <section id="blog" class="blog">
-        <h2>Dicas e Notícias</h2>
-        <div class="blog-post">
+    <section id="blog" class="blog reveal">
+        <h2 class="section-title">Dicas e Notícias</h2>
+        <div class="blog-post reveal" data-id="1">
             <h3>Como escolher o imóvel ideal?</h3>
             <p>Dicas úteis para encontrar a casa ou apartamento perfeito para você.</p>
-            <a href="#">Leia mais</a>
+            <a href="#" class="btn-leia-mais" data-post="1">Leia mais</a>
         </div>
-        <!-- Adicione mais posts conforme necessário -->
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Vale Imobiliária. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Vale Imobiliária. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a class="floating-whatsapp" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+            <path d="M19.11 17.07c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.84 1.05-.15.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.35-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.44-.82-1.98-.22-.53-.44-.46-.6-.46-.16 0-.34-.02-.52-.02-.18 0-.47.07-.72.34-.24.27-.95.93-.95 2.26s.98 2.62 1.12 2.8c.14.18 1.93 2.95 4.67 4.14.65.28 1.16.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.06-.11-.24-.18-.5-.31z"/>
+            <path d="M26.82 5.18C23.9 2.27 20.05.73 16.01.73 7.77.73 1.03 7.47 1.03 15.7c0 2.67.7 5.27 2.04 7.56L1 31l7.92-2.02c2.23 1.22 4.76 1.86 7.09 1.86h.01c8.23 0 14.97-6.74 14.97-14.97 0-4.04-1.58-7.86-4.49-10.77zm-10.81 23.6h-.01c-2.18 0-4.33-.58-6.21-1.69l-.45-.27-4.7 1.2 1.26-4.58-.29-.47c-1.25-2.03-1.9-4.38-1.9-6.78 0-7.23 5.88-13.11 13.12-13.11 3.5 0 6.79 1.36 9.26 3.84 2.47 2.47 3.84 5.76 3.84 9.26 0 7.23-5.88 13.1-13.12 13.1z"/>
+        </svg>
+    </a>
+
+    <script src="main.js"></script>
 </body>
 </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vale Imobiliária</title>
-    <link rel="stylesheet" href="style.css">
-</head>
