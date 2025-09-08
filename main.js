@@ -2,6 +2,23 @@
 // Exemplo: scroll suave para navegação
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Tema: padrão dark com toggle e persistência
+    const root = document.documentElement;
+    const THEME_KEY = 'vale:theme';
+    function applyTheme(theme){
+        root.setAttribute('data-theme', theme);
+        try { localStorage.setItem(THEME_KEY, theme); } catch {}
+    }
+    let stored = null;
+    try { stored = localStorage.getItem(THEME_KEY); } catch {}
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = stored || (prefersDark ? 'dark' : 'dark'); // força dark por padrão
+    applyTheme(initial);
+    document.getElementById('theme-toggle')?.addEventListener('click', ()=>{
+        const current = root.getAttribute('data-theme') || 'dark';
+        applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
     // Menu mobile toggle
     const toggle = document.getElementById('menu-toggle');
     const links = document.getElementById('nav-links');
